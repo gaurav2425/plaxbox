@@ -223,7 +223,7 @@ const Email = ({navigation}) => {
                 });
               }}>
               <View>
-                <Text style={styles.btntxt}>Next</Text>
+                <Text style={styles.btntxt}>Nextt</Text>
               </View>
             </TouchableRipple>
           ) : validemail === false ? (
@@ -259,7 +259,7 @@ const Email = ({navigation}) => {
                 });
               }}>
               <View>
-                <Text style={styles.btntxt}>Next</Text>
+                <Text style={styles.btntxt}>Nextt</Text>
               </View>
             </TouchableRipple>
           ) : (
@@ -269,6 +269,7 @@ const Email = ({navigation}) => {
               rippleColor="rgba(255, 255, 255, .4)"
               onPress={() => {
                 console.log('Clicked');
+                navigation.navigate('otp');
                 sendotp();
                 getemail(email);
                 dispatch(
@@ -278,7 +279,7 @@ const Email = ({navigation}) => {
                 );
               }}>
               <View>
-                <Text style={styles.btntxt}>Next</Text>
+                <Text style={styles.btntxt}>Nextsend</Text>
               </View>
             </TouchableRipple>
           )}

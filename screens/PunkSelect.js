@@ -7,6 +7,9 @@ import {
   ScrollView,
 } from 'react-native';
 import {useSelector, useDispatch} from 'react-redux';
+// import data from './data.json';
+import data from '../JsonData/data.json';
+
 import {incNumber, decNumber} from '../actions/index';
 import {TouchableRipple} from 'react-native-paper';
 import Punk from '../components/Punk';
@@ -14,9 +17,13 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const PunkSelect = ({navigation}) => {
-  const [punks, setPunks] = useState([]);
+  const [punks, setPunks] = useState();
   const myState = useSelector(state => state.changeTheNumber);
   const dispatch = useDispatch();
+
+  const fetchPunks1 = async () => {
+    console.log('Ran');
+  };
 
   const fetchPunks = async () => {
     fetch('https://cryptopunks.herokuapp.com/api/punks', {
@@ -26,13 +33,16 @@ const PunkSelect = ({navigation}) => {
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data[100].image);
+        console.log('Ran');
+        console.log(data);
         setPunks(data);
+        console.log('Ran');
       });
   };
 
   useEffect(() => {
     fetchPunks();
+    fetchPunks1();
   }, []);
 
   return (
@@ -62,14 +72,14 @@ const PunkSelect = ({navigation}) => {
               );
             })} */}
 
-            {punks
+            {data
               // .filter(person => {
               //   if (person.type == 'Male') {
               //     return person;
               //   }
               // })
-              .slice(0, 100)
-              .map((punk, index) => {
+              // .slice(0, 100)
+              ?.map((punk, index) => {
                 return (
                   <TouchableOpacity
                     style={styles.touchable}
