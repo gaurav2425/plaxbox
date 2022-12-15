@@ -653,14 +653,20 @@ const Home = ({navigation}) => {
           <Text>Press me to send notification</Text>
         </TouchableOpacity> */}
 
-        {/* <Chat name="gaurav burande"></Chat>
+        <Chat name="gaurav burande"></Chat>
         <Chat name="Ajinkya sahu"></Chat>
         <Chat name="swaraj pawar"></Chat>
         <Chat name="pinky sharma"></Chat>
         <Chat name="naman yadav"></Chat>
         <Chat name="vishal singh"></Chat>
         <Chat name="karan mehra"></Chat>
-        <Chat name="hemant thackrey"></Chat> */}
+        <Chat name="hemant thackrey"></Chat>
+        <Chat name="swaraj pawar"></Chat>
+        <Chat name="pinky sharma"></Chat>
+        <Chat name="naman yadav"></Chat>
+        <Chat name="vishal singh"></Chat>
+        <Chat name="karan mehra"></Chat>
+        <Chat name="hemant thackrey"></Chat>
       </ScrollView>
 
       <StatusBar barStyle="dark-content" backgroundColor="#FAF5EF"></StatusBar>
