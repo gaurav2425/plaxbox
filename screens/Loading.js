@@ -18,7 +18,6 @@ const Loading = ({navigation}) => {
     <View style={styles.loadingcontainer}>
       {/* <ActivityIndicator size={50} color="#3E3C9C" /> */}
       {/* <ActivityIndicator size={50} color="#F6421B" /> */}
-      {/* <ActivityIndicator size={50} color="#F6421B" /> */}
       <Text style={styles.loadingtext}>Navigating to Plaxbox</Text>
     </View>
   );
